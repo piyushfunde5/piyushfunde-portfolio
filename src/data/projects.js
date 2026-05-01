@@ -141,6 +141,72 @@ export const projects = [
     ],
   },
   {
+    id: "subsmart",
+    slug: "subsmart",
+    title: "SubSmart",
+    subtitle: "Stop wasting money on subscriptions you don't use.",
+    description:
+      "A 90-second subscription audit that tells you exactly which services to keep, review, or cancel — no login, no bank access, no dashboard to maintain.",
+    summary:
+      "SubSmart was built around one insight: people don't cancel subscriptions because they forget they have them, not because they want to keep them. A three-step audit — select your apps, answer two usage questions per service, get a personalised verdict — surfaces the ₹1,847 average waste hiding in plain sight.",
+    image: "/images/projects/subsmart-card.png",
+    liveUrl: "https://getsubsmart.opsbrainai.com/",
+    prdUrl: null,
+    caseStudyUrl: "/projects/subsmart",
+    tags: ["FinTech", "Consumer", "0 to 1", "Vibe Coding"],
+    metrics: [
+      { value: "₹1,847", label: "Average monthly waste identified per user across streaming and subscription services. The number that makes the product's case in one stat." },
+      { value: "90 seconds", label: "End-to-end audit completion time. Speed was the core design constraint — any longer and users abandon before seeing their result." },
+      { value: "0 inputs", label: "No login, no bank access, no manual price entry. Pre-loaded pricing data removes every barrier between landing and insight." },
+      { value: "3 verdicts", label: "Keep, Review, or Cancel — with a specific reason for each. Actionable output, not a dashboard to interpret." },
+    ],
+    walkthroughUrl: null,
+    walkthroughCaption: "A 90-second walkthrough of the SubSmart audit flow.",
+    caseSections: [
+      {
+        title: "The subscription trap nobody talks about",
+        content:
+          "The average Indian household pays for 6–8 streaming and software subscriptions simultaneously. Most were signed up during a free trial, a sale, or a moment of impulse. The problem isn't that people don't want to cancel — it's that they never audit. There's no natural trigger to review what's running in the background, and no tool built for the 90-second attention span most people have for this task.",
+      },
+      {
+        title: "Why dashboards fail and verdicts work",
+        content:
+          "Existing tools like bank spend trackers surface subscription data but don't tell you what to do with it. Users see a list of charges and still don't act — because ambiguity is the real barrier, not information. SubSmart replaces the dashboard with a verdict: Keep, Review, or Cancel. Two usage questions per service is enough signal. The output is a decision, not more data to process.",
+      },
+      {
+        title: "Zero-friction design as the core constraint",
+        content:
+          "Every step that required user effort was a potential drop-off. No login. No bank connection. No manual price entry. Pre-loaded pricing data for every major platform meant users could go from landing to result without touching a form field that required research. The entire experience was designed to be completable before the user's attention ran out.",
+      },
+    ],
+    layers: [
+      {
+        number: "01",
+        title: "Service Selection",
+        description:
+          "User picks their active subscriptions from a pre-loaded list — no typing, no price lookup. Indian market pricing built in.",
+      },
+      {
+        number: "02",
+        title: "Usage Assessment",
+        description:
+          "Two questions per service: how often do you use it, and could you replace it for free? Enough signal to generate a confident verdict.",
+      },
+      {
+        number: "03",
+        title: "Personalised Audit",
+        description:
+          "Each service gets a verdict — Keep, Review, or Cancel — with a specific reason. Not a score. Not a chart. A decision.",
+      },
+      {
+        number: "04",
+        title: "Savings Summary",
+        description:
+          "Total potential monthly savings surfaced at the end. The number that converts curiosity into action.",
+      },
+    ],
+  },
+  {
     id: "pmpath",
     slug: "pmpath",
     title: "PMpath",
