@@ -150,6 +150,74 @@ export const projects = [
     summary:
       "SubSmart was built around one insight: people don't cancel subscriptions because they forget they have them, not because they want to keep them. A three-step audit — select your apps, answer two usage questions per service, get a personalised verdict — surfaces the ₹1,847 average waste hiding in plain sight.",
     image: "/images/projects/subsmart-card.png",
+    images: [
+      {
+        src: "/images/projects/subsmart/1.jpeg",
+        caption: "Landing",
+        label: "LANDING",
+        description: "The value prop in one headline — you're probably paying for apps you forgot you had. Three steps, 90 seconds, no account required.",
+        bullets: [
+          "Problem stated before a single tap: forgotten subscriptions drain budgets",
+          "Three-step flow visible upfront so users know exactly what they're committing to",
+          "Safe · Private · Free removes every trust barrier before the CTA",
+        ],
+      },
+      {
+        src: "/images/projects/subsmart/2.jpeg",
+        caption: "App Selection",
+        label: "APP SELECTION",
+        description: "Pick your subscriptions from a pre-loaded list. No typing, no price lookup — pricing for every major Indian platform is already built in.",
+        bullets: [
+          "Categorised tabs: Streaming, Music, Food, Cloud — no scrolling through irrelevant apps",
+          "Monthly spend counter updates in real time as you tap",
+          "Pre-loaded pricing means zero manual input from the user",
+        ],
+      },
+      {
+        src: "/images/projects/subsmart/3.jpeg",
+        caption: "Plan Picker",
+        label: "PLAN PICKER",
+        description: "Bottom sheet lets users select their exact plan tier so the spend calculation is accurate, not estimated.",
+        bullets: [
+          "All plan tiers shown with exact rupee amounts — no guessing",
+          "Slide up on tap, dismiss to continue — no page navigation",
+          "Handles variable pricing across Mobile, Basic, Standard, and Premium tiers",
+        ],
+      },
+      {
+        src: "/images/projects/subsmart/4.jpeg",
+        caption: "Usage Q1",
+        label: "USAGE QUESTION 1",
+        description: "First of two questions per service: when did you last use it? Recency is the strongest signal for whether a subscription is worth keeping.",
+        bullets: [
+          "Four options cover the full behavioural range without overwhelming",
+          "Running spend total visible in the header — keeps the stakes visible",
+          "One question per screen keeps the cognitive load minimal",
+        ],
+      },
+      {
+        src: "/images/projects/subsmart/5.jpeg",
+        caption: "Usage Q2",
+        label: "USAGE QUESTION 2",
+        description: "Second question: how often do you use it? Frequency combined with recency gives enough signal for a confident Keep, Review, or Cancel verdict.",
+        bullets: [
+          "Consistent layout across all services — users build a pattern and move fast",
+          "No free-text fields — every answer is a tap",
+          "Two questions total per service keeps the 90-second promise achievable",
+        ],
+      },
+      {
+        src: "/images/projects/subsmart/6.jpeg",
+        caption: "Audit Results",
+        label: "YOUR AUDIT",
+        description: "The output: a verdict per service with a specific reason. Not a dashboard. Not a score. A decision you can act on in seconds.",
+        bullets: [
+          "KEEP verdict with justification — 'Actively used. ₹199/mo is justified'",
+          "Thumbs up/down lets users override the verdict if they disagree",
+          "Renewal reminder opt-in converts a one-time audit into an ongoing safety net",
+        ],
+      },
+    ],
     liveUrl: "https://getsubsmart.opsbrainai.com/",
     prdUrl: null,
     caseStudyUrl: "/projects/subsmart",
@@ -216,6 +284,85 @@ export const projects = [
     summary:
       "PMpath replaces the infinite preparation loop with a calibrated, gated journey. Instead of passive course consumption, it gives aspiring PMs an honest signal of where they actually stand and a concrete path to their first application.",
     image: "/images/projects/pmpath-card.png",
+    images: [
+      {
+        src: "/images/projects/pmpath/1.png",
+        caption: "Landing",
+        label: "LANDING",
+        description: "The hook: you already think like a PM — let us prove it. Leads with confidence, not a course catalogue.",
+        bullets: [
+          "Resume upload as the primary CTA — gets users into the product immediately",
+          "Quiz option for users without a resume, so no one is gated out at the start",
+          "Value prop stated in one line: skills mapped, gaps identified, path to first role",
+        ],
+      },
+      {
+        src: "/images/projects/pmpath/2.png",
+        caption: "Onboarding",
+        label: "ONBOARDING",
+        description: "Step 1 of 3: tell us about yourself. Progress bar and contextual sidebar keep users oriented and reduce drop-off.",
+        bullets: [
+          "33% complete shown upfront — users know exactly how much is left",
+          "Why this matters sidebar explains personalisation logic as users fill it in",
+          "Social proof embedded in the sidebar: join 12k+ PMs",
+        ],
+      },
+      {
+        src: "/images/projects/pmpath/3.png",
+        caption: "Resume Upload",
+        label: "RESUME UPLOAD",
+        description: "Step 2: drop your PDF. The engine extracts PM-relevant experience the user didn't know they had.",
+        bullets: [
+          "Drag-and-drop with a fallback browse button — works for all users",
+          "66% complete — users are close enough to finish",
+          "No-resume path visible below the fold so switchers without a traditional CV aren't blocked",
+        ],
+      },
+      {
+        src: "/images/projects/pmpath/5.png",
+        caption: "Readiness Results",
+        label: "READINESS RESULTS",
+        description: "The honest signal: resume parsed, PM-relevant skills identified, starting readiness score calculated across four PM tracks.",
+        bullets: [
+          "Three stats surfaced: work experiences found, PM skills identified, readiness score",
+          "Four PM tracks with readiness % each — Growth PM highlighted as strong match",
+          "Score is a starting point, not a verdict — sets up the learning path without demoralising",
+        ],
+      },
+      {
+        src: "/images/projects/pmpath/6.png",
+        caption: "PM Assessment",
+        label: "PM ASSESSMENT",
+        description: "Scenario-based questions calibrate the readiness score beyond what a resume can show. AI evaluates the answer, not just the format.",
+        bullets: [
+          "Real PM scenarios, not trivia — tests decision-making, not memorisation",
+          "1 of 6 shown with a progress bar — users know the assessment is bounded",
+          "Five answer options surface reasoning patterns, not just correct/incorrect",
+        ],
+      },
+      {
+        src: "/images/projects/pmpath/7.png",
+        caption: "Dashboard",
+        label: "DASHBOARD",
+        description: "The personalised home base: readiness score, skill breakdown across 8 PM competencies, and a clear next action.",
+        bullets: [
+          "Skill breakdown shows exactly where to focus — no vague 'keep learning' advice",
+          "What to do next is always surfaced — removes the paralysis of open-ended prep",
+          "Streak counter builds the habit loop that keeps users returning",
+        ],
+      },
+      {
+        src: "/images/projects/pmpath/9.png",
+        caption: "Learning Path",
+        label: "LEARNING PATH",
+        description: "Gated curriculum: each stage unlocks only when the previous one is complete. Progress is earned, not passive.",
+        bullets: [
+          "PM Foundations completed, Analytical Skills in progress — state is always clear",
+          "Locked stages visible so users can see the full path ahead",
+          "Completion gating prevents the 'passive course consumption' loop the product was built to replace",
+        ],
+      },
+    ],
     liveUrl: "https://pmpath.piyushfunde.com/",
     prdUrl: "/docs/pmpath-prd.pdf",
     caseStudyUrl: "/projects/pmpath",
