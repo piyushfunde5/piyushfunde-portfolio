@@ -424,14 +424,26 @@ export default function ProjectDetail({ project, index }) {
 
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-[var(--color-primary)] text-[var(--color-on-primary)] font-bold tracking-tight rounded-[4px] hover:scale-105 transition-transform"
-            >
-              Try it live
-            </a>
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-[var(--color-primary)] text-[var(--color-on-primary)] font-bold tracking-tight rounded-[4px] hover:scale-105 transition-transform"
+              >
+                Try it live
+              </a>
+            )}
+            {!project.liveUrl && project.figmaUrl && (
+              <a
+                href={project.figmaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-[var(--color-primary)] text-[var(--color-on-primary)] font-bold tracking-tight rounded-[4px] hover:scale-105 transition-transform"
+              >
+                View prototype
+              </a>
+            )}
             {project.prdUrl && (
               <a
                 href={project.prdUrl}

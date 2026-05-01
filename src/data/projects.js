@@ -578,4 +578,109 @@ export const projects = [
       },
     ],
   },
+  {
+    id: "blinkit",
+    slug: "blinkit",
+    title: "Blinkit | Peak Assist",
+    subtitle: "Zero-scroll ops for the 10-minute window.",
+    description:
+      "A real-time ops dashboard that auto-triages dark store bottlenecks during demand surges — so the duty manager acts in seconds, not minutes.",
+    summary:
+      "Peak Assist was designed around one constraint: during a Blinkit surge, the duty manager has 90 seconds to identify and resolve a bottleneck before SLA cascades. The existing dashboard required 4–6 navigation steps and multiple context switches to do the same. I redesigned the ops layer around the peak mode state — the system detects surge, surfaces only what changed, and collapses every action to a single tap.",
+    image: "/images/projects/blinkit-card.png",
+    images: [
+      {
+        src: "/images/projects/blinkit/1.png",
+        frame: "desktop",
+        caption: "Normal Mode",
+        label: "NORMAL MODE",
+        description: "Baseline ops view: order throughput, rider availability, and store health at a glance — no noise when demand is within SLA.",
+        bullets: [
+          "Live throughput, active orders, and avg. pick time in the header strip",
+          "Rider pipeline shows available vs. on-delivery ratio before any action is needed",
+          "Ambient status — green across all zones means nothing to act on",
+        ],
+      },
+      {
+        src: "/images/projects/blinkit/2.png",
+        frame: "desktop",
+        caption: "Peak Mode",
+        label: "PEAK ASSIST MODE",
+        description: "System-triggered on surge detection. Everything not relevant to the next 10 minutes is suppressed. The dashboard reconfigures around the bottleneck.",
+        bullets: [
+          "Peak banner surfaces the trigger metric: OPH crossed threshold, ETA slipping",
+          "Priority queue replaces standard pipeline — severity-ranked, red to green",
+          "Quick Actions panel expands — most common surge responses in one tap",
+        ],
+      },
+      {
+        src: "/images/projects/blinkit/3.png",
+        frame: "desktop",
+        caption: "Priority Actions",
+        label: "PRIORITY QUEUE",
+        description: "Auto-triaged order queue with severity scoring. The duty manager sees the exact three orders that need intervention — not the full board.",
+        bullets: [
+          "Severity tiers: Critical (red), At Risk (orange), On Track (green)",
+          "Each card shows elapsed time, assigned rider, and the specific blocker",
+          "Escalate, Reassign, and Override reachable without leaving the card",
+        ],
+      },
+    ],
+    liveUrl: null,
+    figmaUrl: "https://www.figma.com/proto/9SKMqnbUqqZ5LVSdCa42a9/AI-PM---figma-WIP-screens?node-id=3-2096&t=bNtqnv8dUi5aTpP9-1",
+    prdUrl: null,
+    caseStudyUrl: "/projects/blinkit",
+    tags: ["Quick Commerce", "Ops Tech", "0 to 1", "User Research"],
+    metrics: [
+      { value: "4–6 steps → 1", label: "Navigation depth to resolve a surge bottleneck. The duty manager's time-to-action during peak was the core design metric — every screen was evaluated against it." },
+      { value: "90 seconds", label: "Target response window for a P1 bottleneck during peak. The dashboard was designed to surface the right action before the window closes." },
+      { value: "3 severity tiers", label: "Critical, At Risk, On Track. Auto-triaged from order delay data so the manager reads the queue top-down and acts, not diagnoses." },
+      { value: "6 quick actions", label: "Pre-built surge responses covering 80%+ of peak incidents. Designed from incident log analysis across 12 dark store shifts." },
+    ],
+    walkthroughUrl: null,
+    walkthroughCaption: "A 2-minute walkthrough of Peak Assist in action during a simulated surge.",
+    caseSections: [
+      {
+        title: "The 10-minute window nobody was designing for",
+        content:
+          "In quick commerce, SLA failure isn't a slow decay — it cascades. One delayed order triggers a reassignment, which shifts a rider's route, which delays two more orders. The duty manager has a 90-second window to intervene before it compounds. The existing Blinkit ops dashboard was designed for monitoring, not intervention. It showed everything equally, which meant the most critical signal was buried in the same view as ambient data.",
+      },
+      {
+        title: "Surge state as a design primitive",
+        content:
+          "Most ops dashboards are static — the same layout whether demand is at 40% or 140% of capacity. Peak Assist introduced surge state as a first-class design primitive. When OPH crosses threshold, the system doesn't just alert — it reconfigures. Non-urgent panels collapse, the priority queue surfaces, and the Quick Actions panel expands to the most likely responses. The manager doesn't have to decide what to look at. The dashboard already made that call.",
+      },
+      {
+        title: "Designed from incident logs, not assumptions",
+        content:
+          "The six Quick Actions weren't chosen arbitrarily. I mapped the most common duty manager interventions from shift incident logs: rider reallocation, SLA extension, zone override, escalation to ops lead, manual re-pick assignment, and inventory hold flag. Together they covered 80%+ of logged P1 incidents. Designing from real incident patterns meant the one-tap actions matched the decisions managers were already making — just faster.",
+      },
+    ],
+    layers: [
+      {
+        number: "01",
+        title: "Surge Detection",
+        description:
+          "Monitors orders-per-hour against capacity threshold. Triggers Peak Assist mode automatically — no manual toggle needed.",
+      },
+      {
+        number: "02",
+        title: "Auto-Triage",
+        description:
+          "Severity-scores every active order in real time. Critical, At Risk, On Track — the queue is always ranked, never flat.",
+      },
+      {
+        number: "03",
+        title: "Quick Actions",
+        description:
+          "Six pre-built responses for the most common surge scenarios. Each shows downstream impact before the manager confirms.",
+      },
+      {
+        number: "04",
+        title: "Auto-Logging",
+        description:
+          "Every action taken during Peak mode is logged with timestamp and outcome. The shift handover report populates itself.",
+      },
+    ],
+  },
 ];

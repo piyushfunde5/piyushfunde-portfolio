@@ -20,17 +20,19 @@ export default function ProjectCard({ project, index }) {
             {project.description}
           </p>
           <div className="flex flex-wrap gap-6">
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[var(--color-primary)] font-bold inline-flex items-center gap-2 group/link min-h-[44px]"
-            >
-              Try the live product
-              <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+            {(project.liveUrl || project.figmaUrl) && (
+              <a
+                href={project.liveUrl || project.figmaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--color-primary)] font-bold inline-flex items-center gap-2 group/link min-h-[44px]"
+              >
+                {project.liveUrl ? "Try the live product" : "View prototype"}
+                <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            )}
             <Link
               href={project.caseStudyUrl}
               className="text-[var(--color-primary)] font-bold inline-flex items-center gap-2 group/link min-h-[44px]"
