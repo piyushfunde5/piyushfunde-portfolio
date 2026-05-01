@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ProjectCard({ project, index }) {
   const number = String(index + 1).padStart(2, "0");
@@ -42,11 +43,21 @@ export default function ProjectCard({ project, index }) {
           </div>
         </div>
 
-        {/* Image placeholder */}
-        <div className="aspect-video bg-[var(--color-surface-container-low)] overflow-hidden rounded shadow-2xl flex items-center justify-center">
-          <span className="text-[var(--color-on-surface-variant)]/30 text-xl font-semibold">
-            {project.title}
-          </span>
+        {/* Project tile image */}
+        <div className="aspect-video bg-[var(--color-surface-container-low)] overflow-hidden rounded shadow-2xl relative">
+          {project.image ? (
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <span className="text-[var(--color-on-surface-variant)]/30 text-xl font-semibold">{project.title}</span>
+            </div>
+          )}
         </div>
       </div>
     </div>
