@@ -442,6 +442,80 @@ export const projects = [
     summary:
       "DealPilot was designed to solve the \"entry-fatigue\" that kills early-stage startup sales. I stripped the CRM back to its core: capturing context during the call without breaking the founder's flow.",
     image: "/images/projects/dealpilot-card.png",
+    images: [
+      {
+        src: "/images/projects/dealpilot/1.png",
+        frame: "desktop",
+        caption: "Landing",
+        label: "LANDING",
+        description: "Every deal you ever spoke about. Remembered. The value prop targets the exact failure mode founders know: warm leads going dark because nobody logged the call.",
+        bullets: [
+          "Voice logging, auto-capture, and daily priority actions called out upfront",
+          "Social proof: 400+ founders who stopped losing warm leads",
+          "Google and LinkedIn sign-in — no new account friction",
+        ],
+      },
+      {
+        src: "/images/projects/dealpilot/3.png",
+        frame: "desktop",
+        caption: "Connect Channels",
+        label: "PASSIVE CAPTURE",
+        description: "The zero data entry promise starts here. Sync Gmail, WhatsApp, and Calendar once — DealPilot auto-creates contacts and moves deal stages without the founder touching anything.",
+        bullets: [
+          "Three channels in one step: email, messaging, and calendar",
+          "AI intent detection surfaces deal signals from natural conversation",
+          "Skip option for founders who want to start fresh from the pipeline",
+        ],
+      },
+      {
+        src: "/images/projects/dealpilot/8.png",
+        frame: "desktop",
+        caption: "Dashboard",
+        label: "TODAY'S FOCUS",
+        description: "The morning brief: two priority actions surfaced from the full pipeline so the founder always knows what to do first without reading every deal.",
+        bullets: [
+          "Deal summary with AI context: 'Strong momentum on this deal with James Harris'",
+          "Log Call, Follow Up, View Deal, Done — all reachable in one tap from the card",
+          "Active pipeline visible below so nothing falls off the radar",
+        ],
+      },
+      {
+        src: "/images/projects/dealpilot/9.png",
+        frame: "desktop",
+        caption: "Pipeline",
+        label: "PIPELINE",
+        description: "Kanban view of 50 active deals across five stages — all auto-populated from email and WhatsApp, none entered manually.",
+        bullets: [
+          "₹5.19Cr pipeline, ₹84L likely to close, ₹15L this-month target — always visible",
+          "Deal cards show company, value, and last activity at a glance",
+          "Auto-move toggle advances deals based on meeting and proposal signals",
+        ],
+      },
+      {
+        src: "/images/projects/dealpilot/11.png",
+        frame: "desktop",
+        caption: "Analytics",
+        label: "SALES INSIGHTS",
+        description: "Pipeline health and DealPilot Insights — AI-generated observations the founder actually needs, not generic charts.",
+        bullets: [
+          "Deals stall most at Proposal stage (avg 16 days) — surfaced automatically",
+          "Voice-noted deals close 2.3x faster — behaviour-based insight, not a metric",
+          "Win rate, velocity, and win/loss trend without any manual reporting",
+        ],
+      },
+      {
+        src: "/images/projects/dealpilot/12.png",
+        frame: "desktop",
+        caption: "Voice Logger",
+        label: "VOICE LOGGING",
+        description: "Tap record after a call. DealPilot transcribes, extracts context, and updates the CRM record — the entire logging flow in under 60 seconds.",
+        bullets: [
+          "One-tap record from the deal card — no app switching",
+          "Transcribes in real time and pulls structured fields from natural speech",
+          "Pipeline context stays visible behind the logger — founder never loses their place",
+        ],
+      },
+    ],
     liveUrl: "https://dealpilotcrm.lovable.app/",
     note: {
       text: "For the best experience, download the sample sales data sheet before testing the app and upload it during onboarding. This loads real data so you can see curated sections in action.",
