@@ -628,7 +628,7 @@ export const projects = [
     ],
     liveUrl: null,
     figmaUrl: "https://www.figma.com/proto/9SKMqnbUqqZ5LVSdCa42a9/AI-PM---figma-WIP-screens?node-id=3-2096&t=bNtqnv8dUi5aTpP9-1",
-    prdUrl: null,
+    prdUrl: "/docs/blinkit-prd.pdf",
     caseStudyUrl: "/projects/blinkit",
     tags: ["Quick Commerce", "Ops Tech", "0 to 1", "User Research"],
     metrics: [
