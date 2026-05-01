@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import Link from "next/link";
+import { usePostHog } from "posthog-js/react";
 
 const AUTO_PLAY_INTERVAL = 7000;
 const RESUME_DELAY = 6000;
@@ -384,6 +385,11 @@ function CarouselPlaceholder({ title }) {
 
 export default function ProjectDetail({ project, index }) {
   const number = String(index + 1).padStart(2, "0");
+  const posthog = usePostHog();
+
+  const track = (event, extra = {}) => {
+    posthog?.capture(event, { project: project.id, project_title: project.title, ...extra });
+  };
 
   return (
     <main className="max-w-7xl mx-auto px-6 lg:px-8 py-12 md:py-20">
@@ -429,6 +435,7 @@ export default function ProjectDetail({ project, index }) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track("live_product_clicked", { url: project.liveUrl })}
                 className="px-8 py-4 bg-[var(--color-primary)] text-[var(--color-on-primary)] font-bold tracking-tight rounded-[4px] hover:scale-105 transition-transform"
               >
                 Try it live
@@ -439,6 +446,7 @@ export default function ProjectDetail({ project, index }) {
                 href={project.figmaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track("prototype_clicked", { url: project.figmaUrl })}
                 className="px-8 py-4 bg-[var(--color-primary)] text-[var(--color-on-primary)] font-bold tracking-tight rounded-[4px] hover:scale-105 transition-transform"
               >
                 View prototype
@@ -449,6 +457,7 @@ export default function ProjectDetail({ project, index }) {
                 href={project.prdUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track("prd_clicked")}
                 className="px-8 py-4 border border-[var(--color-primary)]/20 text-[var(--color-primary)] font-bold tracking-tight rounded-[4px] hover:bg-[var(--color-primary)]/10 transition-all"
               >
                 Read the PRD

@@ -1,8 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePostHog } from "posthog-js/react";
 
 export default function ProjectCard({ project, index }) {
   const number = String(index + 1).padStart(2, "0");
+  const posthog = usePostHog();
+
+  const track = (event, extra = {}) => {
+    posthog?.capture(event, { project: project.id, project_title: project.title, ...extra });
+  };
 
   return (
     <div className="bg-[var(--color-surface-container-highest)] p-8 lg:p-12 relative overflow-hidden group">
@@ -25,6 +33,7 @@ export default function ProjectCard({ project, index }) {
                 href={project.liveUrl || project.figmaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track("live_product_clicked", { url: project.liveUrl || project.figmaUrl })}
                 className="text-[var(--color-primary)] font-bold inline-flex items-center gap-2 group/link min-h-[44px]"
               >
                 {project.liveUrl ? "Try the live product" : "View prototype"}
@@ -35,6 +44,7 @@ export default function ProjectCard({ project, index }) {
             )}
             <Link
               href={project.caseStudyUrl}
+              onClick={() => track("case_study_clicked")}
               className="text-[var(--color-primary)] font-bold inline-flex items-center gap-2 group/link min-h-[44px]"
             >
               How I built it

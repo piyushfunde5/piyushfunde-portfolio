@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/react";
+import PostHogProvider from "@/components/PostHogProvider";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -53,10 +55,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${manrope.variable} ${inter.variable} antialiased`}>
       <body className="min-h-screen flex flex-col">
-        <ScrollToTop />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <PostHogProvider>
+          <ScrollToTop />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <Analytics />
+        </PostHogProvider>
       </body>
     </html>
   );
