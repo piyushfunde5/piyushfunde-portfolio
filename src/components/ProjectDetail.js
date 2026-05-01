@@ -486,7 +486,7 @@ export default function ProjectDetail({ project, index }) {
       <section className="mb-32">
         <div className="mb-12">
           <span className="text-[var(--color-primary)] text-xs uppercase tracking-[0.2em] font-bold">
-            How I&apos;d measure success
+            The Numbers
           </span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
