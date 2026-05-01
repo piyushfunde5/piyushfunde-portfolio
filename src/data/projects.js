@@ -153,6 +153,7 @@ export const projects = [
     images: [
       {
         src: "/images/projects/subsmart/1.jpeg",
+        frame: "mobile",
         caption: "Landing",
         label: "LANDING",
         description: "The value prop in one headline — you're probably paying for apps you forgot you had. Three steps, 90 seconds, no account required.",
@@ -164,6 +165,7 @@ export const projects = [
       },
       {
         src: "/images/projects/subsmart/2.jpeg",
+        frame: "mobile",
         caption: "App Selection",
         label: "APP SELECTION",
         description: "Pick your subscriptions from a pre-loaded list. No typing, no price lookup — pricing for every major Indian platform is already built in.",
@@ -175,6 +177,7 @@ export const projects = [
       },
       {
         src: "/images/projects/subsmart/3.jpeg",
+        frame: "mobile",
         caption: "Plan Picker",
         label: "PLAN PICKER",
         description: "Bottom sheet lets users select their exact plan tier so the spend calculation is accurate, not estimated.",
@@ -186,6 +189,7 @@ export const projects = [
       },
       {
         src: "/images/projects/subsmart/4.jpeg",
+        frame: "mobile",
         caption: "Usage Q1",
         label: "USAGE QUESTION 1",
         description: "First of two questions per service: when did you last use it? Recency is the strongest signal for whether a subscription is worth keeping.",
@@ -197,6 +201,7 @@ export const projects = [
       },
       {
         src: "/images/projects/subsmart/5.jpeg",
+        frame: "mobile",
         caption: "Usage Q2",
         label: "USAGE QUESTION 2",
         description: "Second question: how often do you use it? Frequency combined with recency gives enough signal for a confident Keep, Review, or Cancel verdict.",
@@ -208,6 +213,7 @@ export const projects = [
       },
       {
         src: "/images/projects/subsmart/6.jpeg",
+        frame: "mobile",
         caption: "Audit Results",
         label: "YOUR AUDIT",
         description: "The output: a verdict per service with a specific reason. Not a dashboard. Not a score. A decision you can act on in seconds.",
@@ -287,6 +293,7 @@ export const projects = [
     images: [
       {
         src: "/images/projects/pmpath/1.png",
+        frame: "desktop",
         caption: "Landing",
         label: "LANDING",
         description: "The hook: you already think like a PM — let us prove it. Leads with confidence, not a course catalogue.",
@@ -298,6 +305,7 @@ export const projects = [
       },
       {
         src: "/images/projects/pmpath/2.png",
+        frame: "desktop",
         caption: "Onboarding",
         label: "ONBOARDING",
         description: "Step 1 of 3: tell us about yourself. Progress bar and contextual sidebar keep users oriented and reduce drop-off.",
@@ -309,6 +317,7 @@ export const projects = [
       },
       {
         src: "/images/projects/pmpath/3.png",
+        frame: "desktop",
         caption: "Resume Upload",
         label: "RESUME UPLOAD",
         description: "Step 2: drop your PDF. The engine extracts PM-relevant experience the user didn't know they had.",
@@ -320,6 +329,7 @@ export const projects = [
       },
       {
         src: "/images/projects/pmpath/5.png",
+        frame: "desktop",
         caption: "Readiness Results",
         label: "READINESS RESULTS",
         description: "The honest signal: resume parsed, PM-relevant skills identified, starting readiness score calculated across four PM tracks.",
@@ -331,6 +341,7 @@ export const projects = [
       },
       {
         src: "/images/projects/pmpath/6.png",
+        frame: "desktop",
         caption: "PM Assessment",
         label: "PM ASSESSMENT",
         description: "Scenario-based questions calibrate the readiness score beyond what a resume can show. AI evaluates the answer, not just the format.",
@@ -342,6 +353,7 @@ export const projects = [
       },
       {
         src: "/images/projects/pmpath/7.png",
+        frame: "desktop",
         caption: "Dashboard",
         label: "DASHBOARD",
         description: "The personalised home base: readiness score, skill breakdown across 8 PM competencies, and a clear next action.",
@@ -353,6 +365,7 @@ export const projects = [
       },
       {
         src: "/images/projects/pmpath/9.png",
+        frame: "desktop",
         caption: "Learning Path",
         label: "LEARNING PATH",
         description: "Gated curriculum: each stage unlocks only when the previous one is complete. Progress is earned, not passive.",

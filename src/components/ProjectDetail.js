@@ -104,6 +104,7 @@ function ImageCarousel({ images }) {
   const startAutoPlayRef = useRef(null);
 
   const getDeviceType = (index) => {
+    if (images[index]?.frame) return images[index].frame;
     const r = ratios[index];
     if (!r || r < 0.7) return "mobile";
     if (r > 1.3) return "desktop";
