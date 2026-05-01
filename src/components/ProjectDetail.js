@@ -485,10 +485,9 @@ export default function ProjectDetail({ project, index }) {
       </section>
 
       {/* Image Carousel */}
-      {project.images?.length > 0
-        ? <ImageCarousel images={project.images} url={project.liveUrl} />
-        : <CarouselPlaceholder title={project.title} />
-      }
+      {project.images?.length > 0 && (
+        <ImageCarousel images={project.images} url={project.liveUrl} />
+      )}
 
       {/* Summary */}
       <section className="max-w-3xl mb-24">
