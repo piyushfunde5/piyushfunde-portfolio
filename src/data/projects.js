@@ -579,74 +579,6 @@ export const projects = [
     ],
   },
   {
-    id: "youtube",
-    slug: "youtube",
-    title: "YouTube",
-    subtitle: "The algorithm is the product. And it's defaulting to the wrong answer.",
-    description:
-      "A deep-dive into why YouTube's recommendation system is quietly cannibalising its own revenue engine — and a 4-layer AI preview solution that lets users try before they commit.",
-    summary:
-      "YouTube's long-form viewership dropped 90% in three months after a single algorithm update. Users didn't stop wanting long-form content — YouTube stopped showing it to them. I researched the platform's structural recommendation failure across 71 survey respondents and 3 user interviews, mapped the behavioral gaps through competitive analysis against Netflix, TikTok, Spotify, and Prime Video, and designed a 4-layer AI-powered Preview Engine to bridge the gap between Shorts and long-form without cannibalising either.",
-    image: "/images/projects/youtube-card.png",
-    images: [],
-    liveUrl: null,
-    figmaUrl: null,
-    prdUrl: "/docs/youtube-prd.pdf",
-    caseStudyUrl: "/projects/youtube",
-    tags: ["Consumer", "Platform Strategy", "User Research", "Algorithm Design"],
-    metrics: [
-      { value: "90% drop", label: "In ultra-long-form viewership in 3 months following YouTube's January 2025 algorithm update. Users didn't stop watching — the platform stopped recommending. That's a product failure, not a preference shift." },
-      { value: "40–50%", label: "Of users abandon a long-form video within 30 seconds. The cause isn't weak content — it's commitment anxiety and the total absence of quality signals before clicking. Shorts requires zero commitment. Long-form requires faith." },
-      { value: "<5%", label: "Of Shorts sessions lead to a long-form watch in the same session. The Shorts-to-long-form pipeline leaks almost entirely at the UX level. 52% of users have converted before — the demand exists, the bridge doesn't." },
-      { value: "60–80×", label: "Higher RPM per impression for long-form vs. Shorts. The engagement numbers look fine. The economics don't. Shorts are high in volume, low in value — and the algorithm is optimising for the wrong signal." },
-    ],
-    walkthroughUrl: null,
-    walkthroughCaption: null,
-    caseSections: [
-      {
-        title: "Everyone is looking at the wrong problem",
-        content:
-          "The standard framing is: users prefer Shorts now, so long-form is declining. That's true but it leads to the wrong solution. Most YouTube users don't only want Shorts — they want both. The same person scrolling Shorts on their commute would happily watch a 40-minute documentary on a Sunday evening. The algorithm can't tell when a user is in which mode. When it's not sure, it defaults to Shorts, because Shorts produce a faster and cleaner engagement signal. That default is the real problem. It's a product architecture failure, not a user preference problem.",
-      },
-      {
-        title: "What 71 survey responses and 3 interviews revealed",
-        content:
-          "45% of users cite time constraints as the top barrier to long-form — yet the same users spend 95+ minutes a day on Shorts, equivalent to 5–6 long-form videos. They don't lack time. They lack confidence that a specific video will be worth it. 65% make their stay-or-leave decision within the first 30 seconds. Three user interviews spanning a college student, a homemaker, and an IT professional surfaced the same friction independently: no direct path from an engaging Short to its source video, generic trust signals that don't help, and a home feed that doesn't reflect their actual intent. The pain is structural and consistent across personas.",
-      },
-      {
-        title: "The AI Preview Engine: try before you commit",
-        content:
-          "The solution is a 4-layer preview system that surfaces quality signals before a user clicks. Layer 1: a 15–30 second silent hover preview that auto-selects the highest-impact moment using retention peaks, replay heatmaps, and comment activity. Layer 2: a user-controlled 30–60 second extended preview with three selectable modes — Quick Gist, Insight Mode, and Drama Mode — tailored to intent. Layer 3: an AI-generated interactive timeline map with clickable chapter entry points. Layer 4: a personalization engine that adapts preview style per user based on watch behavior over time. YouTube already captures per-second engagement data for every video. The infrastructure exists. The viewer-facing feature doesn't.",
-      },
-    ],
-    layers: [
-      {
-        number: "01",
-        title: "Smart Hover Preview",
-        description:
-          "15–30 second silent autoplay on thumbnail hover. AI selects the highest-impact moment from retention peak data, replay heatmaps, and comment activity timestamps.",
-      },
-      {
-        number: "02",
-        title: "Dynamic Preview Modes",
-        description:
-          "User-controlled 30–60 second extended preview with three intent-matched modes: Quick Gist (summary), Insight Mode (key argument, for learners), and Drama Mode (best moments, for entertainment).",
-      },
-      {
-        number: "03",
-        title: "Interactive Timeline Map",
-        description:
-          "AI-detected chapter markers with clickable entry points to the most replayed, most commented, and most controversial timestamps. Users jump to the part that matters to them.",
-      },
-      {
-        number: "04",
-        title: "Personalization Engine",
-        description:
-          "Preview style adapts dynamically per user based on rewatch behavior, drop-off patterns, and content preferences — the same video shows up differently depending on who's watching.",
-      },
-    ],
-  },
-  {
     id: "blinkit",
     slug: "blinkit",
     title: "Blinkit | Peak Assist",
@@ -748,6 +680,74 @@ export const projects = [
         title: "Auto-Logging",
         description:
           "Every action taken during Peak mode is logged with timestamp and outcome. The shift handover report populates itself.",
+      },
+    ],
+  },
+  {
+    id: "youtube",
+    slug: "youtube",
+    title: "YouTube",
+    subtitle: "The algorithm is the product. And it's defaulting to the wrong answer.",
+    description:
+      "A deep-dive into why YouTube's recommendation system is quietly cannibalising its own revenue engine — and a 4-layer AI preview solution that lets users try before they commit.",
+    summary:
+      "YouTube's long-form viewership dropped 90% in three months after a single algorithm update. Users didn't stop wanting long-form content — YouTube stopped showing it to them. I researched the platform's structural recommendation failure across 71 survey respondents and 3 user interviews, mapped the behavioral gaps through competitive analysis against Netflix, TikTok, Spotify, and Prime Video, and designed a 4-layer AI-powered Preview Engine to bridge the gap between Shorts and long-form without cannibalising either.",
+    image: "/images/projects/youtube-card.png",
+    images: [],
+    liveUrl: null,
+    figmaUrl: null,
+    prdUrl: "/docs/youtube-prd.pdf",
+    caseStudyUrl: "/projects/youtube",
+    tags: ["Consumer", "Platform Strategy", "User Research", "Algorithm Design"],
+    metrics: [
+      { value: "90% drop", label: "In ultra-long-form viewership in 3 months following YouTube's January 2025 algorithm update. Users didn't stop watching — the platform stopped recommending. That's a product failure, not a preference shift." },
+      { value: "40–50%", label: "Of users abandon a long-form video within 30 seconds. The cause isn't weak content — it's commitment anxiety and the total absence of quality signals before clicking. Shorts requires zero commitment. Long-form requires faith." },
+      { value: "<5%", label: "Of Shorts sessions lead to a long-form watch in the same session. The Shorts-to-long-form pipeline leaks almost entirely at the UX level. 52% of users have converted before — the demand exists, the bridge doesn't." },
+      { value: "60–80×", label: "Higher RPM per impression for long-form vs. Shorts. The engagement numbers look fine. The economics don't. Shorts are high in volume, low in value — and the algorithm is optimising for the wrong signal." },
+    ],
+    walkthroughUrl: null,
+    walkthroughCaption: null,
+    caseSections: [
+      {
+        title: "Everyone is looking at the wrong problem",
+        content:
+          "The standard framing is: users prefer Shorts now, so long-form is declining. That's true but it leads to the wrong solution. Most YouTube users don't only want Shorts — they want both. The same person scrolling Shorts on their commute would happily watch a 40-minute documentary on a Sunday evening. The algorithm can't tell when a user is in which mode. When it's not sure, it defaults to Shorts, because Shorts produce a faster and cleaner engagement signal. That default is the real problem. It's a product architecture failure, not a user preference problem.",
+      },
+      {
+        title: "What 71 survey responses and 3 interviews revealed",
+        content:
+          "45% of users cite time constraints as the top barrier to long-form — yet the same users spend 95+ minutes a day on Shorts, equivalent to 5–6 long-form videos. They don't lack time. They lack confidence that a specific video will be worth it. 65% make their stay-or-leave decision within the first 30 seconds. Three user interviews spanning a college student, a homemaker, and an IT professional surfaced the same friction independently: no direct path from an engaging Short to its source video, generic trust signals that don't help, and a home feed that doesn't reflect their actual intent. The pain is structural and consistent across personas.",
+      },
+      {
+        title: "The AI Preview Engine: try before you commit",
+        content:
+          "The solution is a 4-layer preview system that surfaces quality signals before a user clicks. Layer 1: a 15–30 second silent hover preview that auto-selects the highest-impact moment using retention peaks, replay heatmaps, and comment activity. Layer 2: a user-controlled 30–60 second extended preview with three selectable modes — Quick Gist, Insight Mode, and Drama Mode — tailored to intent. Layer 3: an AI-generated interactive timeline map with clickable chapter entry points. Layer 4: a personalization engine that adapts preview style per user based on watch behavior over time. YouTube already captures per-second engagement data for every video. The infrastructure exists. The viewer-facing feature doesn't.",
+      },
+    ],
+    layers: [
+      {
+        number: "01",
+        title: "Smart Hover Preview",
+        description:
+          "15–30 second silent autoplay on thumbnail hover. AI selects the highest-impact moment from retention peak data, replay heatmaps, and comment activity timestamps.",
+      },
+      {
+        number: "02",
+        title: "Dynamic Preview Modes",
+        description:
+          "User-controlled 30–60 second extended preview with three intent-matched modes: Quick Gist (summary), Insight Mode (key argument, for learners), and Drama Mode (best moments, for entertainment).",
+      },
+      {
+        number: "03",
+        title: "Interactive Timeline Map",
+        description:
+          "AI-detected chapter markers with clickable entry points to the most replayed, most commented, and most controversial timestamps. Users jump to the part that matters to them.",
+      },
+      {
+        number: "04",
+        title: "Personalization Engine",
+        description:
+          "Preview style adapts dynamically per user based on rewatch behavior, drop-off patterns, and content preferences — the same video shows up differently depending on who's watching.",
       },
     ],
   },
