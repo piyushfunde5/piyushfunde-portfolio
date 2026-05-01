@@ -19,6 +19,10 @@ const signals = [
     title: "0 to 1 Builder",
     description: "Bootstrapped and sold a venture. Built and shipped 3 products end-to-end with code assistance.",
   },
+  {
+    title: "Stakeholder Management",
+    description: "Cross-functional delivery across Legal, Compliance, Risk, Engineering, and Marketing in regulated environments.",
+  },
 ];
 
 export default function Skills() {

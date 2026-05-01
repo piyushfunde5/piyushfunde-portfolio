@@ -81,7 +81,7 @@ export const projects = [
     liveUrl: "https://tripsync.piyushfunde.com",
     prdUrl: "/docs/tripsync-prd.pdf",
     caseStudyUrl: "/projects/tripsync",
-    tags: ["Travel Tech", "Consumer", "0 to 1", "User Research"],
+    tags: ["Travel Tech", "Consumer", "0 to 1", "User Research", "Vibe Coding"],
     metrics: [
       { value: "14/16 interviews", label: "Confirmed organizer tax as the most universal pain point. One person absorbs all research, booking, budgeting, coordination, and blame — that's the problem I designed against." },
       { value: "12/16 interviews", label: "Confirmed the commitment gap. Groups lose two-thirds of members between 'I'm interested' and 'I've committed.' Every organizer invented their own workaround because no product addressed this." },
@@ -153,7 +153,7 @@ export const projects = [
     liveUrl: "https://pmpath.piyushfunde.com/",
     prdUrl: "/docs/pmpath-prd.pdf",
     caseStudyUrl: "/projects/pmpath",
-    tags: ["EdTech", "Career Tech", "0 to 1", "User Research"],
+    tags: ["EdTech", "Career Tech", "0 to 1", "User Research", "Vibe Coding"],
     metrics: [
       { value: "65%+", label: "Onboarding completion target. All 4 steps including proficiency assessment. Defined in PRD as the leading indicator of product-market fit." },
       { value: "45%+", label: "Day-7 retention target. Return and complete at least one task within a week. Learning tools live or die on habit formation." },
@@ -225,7 +225,7 @@ export const projects = [
     },
     prdUrl: "/docs/dealpilot-prd.pdf",
     caseStudyUrl: "/projects/dealpilot",
-    tags: ["B2B SaaS", "Sales Tech", "0 to 1", "User Research"],
+    tags: ["B2B SaaS", "Sales Tech", "0 to 1", "User Research", "Vibe Coding"],
     metrics: [
       { value: "30–40% fewer", label: "Warm leads going dark — the core problem surfaced in founder interviews. This was the number I designed against." },
       { value: "Under 5 min", label: "Daily data entry target. 23% of CRM users cite manual entry as their #1 obstacle. My goal was to make it near-zero." },

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/data/projects";
 
 export const metadata = {
@@ -52,13 +53,22 @@ export default function ProjectsPage() {
           >
             {/* Image area */}
             <div className="aspect-[16/10] bg-[var(--color-surface-container-highest)] relative overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="text-[var(--color-on-surface-variant)]/30 text-2xl font-semibold select-none">
-                  {project.title}
-                </span>
-              </div>
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  <span className="text-[var(--color-on-surface-variant)]/30 text-2xl font-semibold select-none">
+                    {project.title}
+                  </span>
+                </div>
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-surface-container-low)] via-transparent to-transparent" />
-              {/* Hover glow border */}
               <div className="absolute inset-0 border border-[var(--color-primary)]/0 group-hover:border-[var(--color-primary)]/20 transition-colors duration-500" />
             </div>
 
