@@ -1,0 +1,281 @@
+export const projects = [
+  {
+    id: "tripsync",
+    slug: "tripsync",
+    title: "TripSync",
+    subtitle: "One link to plan any group trip.",
+    description:
+      "Replaces the WhatsApp + Google Sheets + Splitwise stack with a single shareable trip link. Built for the coordination layer nobody was solving.",
+    summary:
+      "TripSync was built after 16 user interviews revealed that group travel's real blocker isn't booking — it's getting people to commit, align on budget, and coordinate without burning out one person. I replaced the scattered stack of WhatsApp, Sheets, and Splitwise with a single link that handles everything from RSVP to settlement.",
+    image: "/images/projects/tripsync-card.png",
+    tile: { category: "social", primaryIcon: "compass+map-pin", vibe: "playful" },
+    images: [
+      {
+        src: "/images/projects/tripsync/01-landing.png",
+        caption: "Landing",
+        label: "LANDING",
+        description: "The first screen a new member sees when the organizer shares the trip link — designed to communicate the value prop in one headline.",
+        bullets: [
+          "Names the exact problem: no more scattered WhatsApp chaos",
+          "Single CTA — no account needed just to see what's happening",
+          "Trip name and organizer visible upfront so it feels personal",
+        ],
+      },
+      {
+        src: "/images/projects/tripsync/02-join-invite.png",
+        caption: "Join Invite",
+        label: "JOIN INVITE",
+        description: "A boarding-pass style invite that makes saying yes feel like an event, not another form to fill out.",
+        bullets: [
+          "Destination, dates, and organizer visible before any commitment",
+          "Google sign-in — no new password, no friction",
+          "RSVP captured in a single tap",
+        ],
+      },
+      {
+        src: "/images/projects/tripsync/03-trip-overview.png",
+        caption: "Trip Overview",
+        label: "TRIP OVERVIEW",
+        description: "The single source of truth. Who's in, who's pending, budget status, and the shareable link — all in one screen.",
+        bullets: [
+          "Live RSVP board: confirmed, pending, declined",
+          "Budget range visible at a glance — no guessing",
+          "One link, always current — replace 50 WhatsApp messages",
+        ],
+      },
+      {
+        src: "/images/projects/tripsync/04-polls.png",
+        caption: "Polls",
+        label: "DECISION ALIGNMENT",
+        description: "Structured polls replace chaotic group chats. Every option gets a real vote, and every decision gets a permanent record.",
+        bullets: [
+          "Anonymous voting removes social pressure to agree",
+          "Live percentage breakdown as votes come in",
+          "Status log: Proposed → Voting → Decided → Booked",
+        ],
+      },
+      {
+        src: "/images/projects/tripsync/05-itinerary.png",
+        caption: "Itinerary",
+        label: "ITINERARY",
+        description: "Day-by-day plan with assigned owners, times, and booking status for each activity — so the organizer isn't the only one with context.",
+        bullets: [
+          "Activities assigned to specific members, not just the organizer",
+          "Status tracking: Proposed, Confirmed, Booked",
+          "Everyone sees the same plan — no more version confusion",
+        ],
+      },
+      {
+        src: "/images/projects/tripsync/06-expenses.png",
+        caption: "Expenses",
+        label: "EXPENSE TRACKING",
+        description: "Optimized settlement shows the minimum transfers needed to zero out all balances — no Splitwise free-tier limits.",
+        bullets: [
+          "Add an expense in 4 taps, no daily transaction cap",
+          "Group Fund mode: everyone contributes upfront to a shared pool",
+          "Settlement summary: who pays who, exactly how much",
+        ],
+      },
+    ],
+    liveUrl: "https://tripsync.piyushfunde.com",
+    prdUrl: "/docs/tripsync-prd.pdf",
+    caseStudyUrl: "/projects/tripsync",
+    tags: ["Travel Tech", "Consumer", "0 to 1", "User Research"],
+    metrics: [
+      { value: "14/16 interviews", label: "Confirmed organizer tax as the most universal pain point. One person absorbs all research, booking, budgeting, coordination, and blame — that's the problem I designed against." },
+      { value: "12/16 interviews", label: "Confirmed the commitment gap. Groups lose two-thirds of members between 'I'm interested' and 'I've committed.' Every organizer invented their own workaround because no product addressed this." },
+      { value: "13/16 interviews", label: "Confirmed expense tracking friction. Splitwise's free tier limits 3 transactions/day. I designed two modes — Quick Split and Group Fund — to match how different groups actually behave." },
+      { value: "19 → 5 P0", label: "Pain points identified from primary research, prioritized on severity × solvability. Five scored P0 Critical and form the product scope." },
+    ],
+    walkthroughUrl: null,
+    walkthroughCaption: "A 2-minute walkthrough of how TripSync works.",
+    caseSections: [
+      {
+        title: "Why every group trip has one exhausted person",
+        content:
+          "In 14 of 16 interviews, a single person handled everything: research, booking, budgeting, coordination, and conflict resolution. The organizer often had the worst trip experience because they were project-managing instead of relaxing. Existing tools don't distribute this burden — they concentrate it further by giving the organizer more to manage.",
+      },
+      {
+        title: "The commitment gap no tool was solving",
+        content:
+          "Groups lose two-thirds of their members between 'I'm interested' and 'I've committed.' There's no formal mechanism to capture commitment. People say yes on WhatsApp, then go silent. Every organizer I interviewed invented their own workaround — non-refundable advances, Zoom calls, central funds. Three people, three solutions, one problem. Until commitment is locked, no downstream planning is reliable.",
+      },
+      {
+        title: "16 interviews, 19 pain points, 5 that matter",
+        content:
+          "I conducted 16 interviews over 4 days across Pune, Bangalore, Mumbai, Delhi, Varanasi, and Boston. Ages 23–40, covering active organizers, passive travelers, execution-willing contributors, and family planners. I identified 19 pain points and prioritized them on two dimensions: severity and solvability. Five scored P0 Critical and form the minimum scope a product must address to be genuinely useful.",
+      },
+    ],
+    layers: [
+      {
+        number: "01",
+        title: "Commitment Layer",
+        description:
+          "Organizer shares a link. Each member taps, signs in with Google, and RSVPs. Live status board shows who's confirmed, pending, or out. Auto-email reminders go to non-responders before the deadline.",
+      },
+      {
+        number: "02",
+        title: "Decision Alignment",
+        description:
+          "Anonymous budget slider surfaces the group's overlap range. Structured polls replace chaotic WhatsApp threads. Every decision is logged with status: Proposed, Voting, Decided, Booked.",
+      },
+      {
+        number: "03",
+        title: "Work Distribution",
+        description:
+          "Organizer assigns tasks to specific members with deadlines and status tracking. Email on assignment, reminder when overdue. The burden distributes instead of piling up.",
+      },
+      {
+        number: "04",
+        title: "Expense Tracking",
+        description:
+          "Quick Split mode: add an expense in 4 taps, no daily limits. Group Fund mode: everyone contributes upfront, treasurer logs against the pool. Settlement summary shows optimized transfers.",
+      },
+      {
+        number: "05",
+        title: "Single Source of Truth",
+        description:
+          "One link, always current: confirmed members, dates, plan, budget status, task checklist, expense balances. A member who missed 50 WhatsApp messages taps the link and knows everything in 30 seconds.",
+      },
+    ],
+  },
+  {
+    id: "pmpath",
+    slug: "pmpath",
+    title: "PMpath",
+    subtitle: "Your PM readiness journey starts here.",
+    description:
+      "Tells aspiring PMs exactly where they stand and builds a personalized path to their first product role.",
+    summary:
+      "PMpath replaces the infinite preparation loop with a calibrated, gated journey. Instead of passive course consumption, it gives aspiring PMs an honest signal of where they actually stand and a concrete path to their first application.",
+    image: "/images/projects/pmpath-card.png",
+    liveUrl: "PLACEHOLDER_PMPATH_URL",
+    prdUrl: "/docs/pmpath-prd.pdf",
+    caseStudyUrl: "/projects/pmpath",
+    tags: ["EdTech", "Career Tech", "0 to 1", "User Research"],
+    metrics: [
+      { value: "65%+", label: "Onboarding completion target. All 4 steps including proficiency assessment. Defined in PRD as the leading indicator of product-market fit." },
+      { value: "45%+", label: "Day-7 retention target. Return and complete at least one task within a week. Learning tools live or die on habit formation." },
+      { value: "55%+", label: "Resume builder activation for users above 60% readiness. The product only works if people cross the threshold and actually apply." },
+      { value: "20%+", label: "Interview callback rate for users with 6+ stages complete. The north star — a PM role, not a readiness score." },
+    ],
+    walkthroughUrl: null,
+    walkthroughCaption: "A 2-minute walkthrough of how PMpath works.",
+    caseSections: [
+      {
+        title: "The infinite preparation loop",
+        content:
+          "Thousands of professionals want to break into product management in India. They consume courses, watch videos, and read blogs for months, but never apply. Not because they lack skill, but because nobody has ever given them an honest signal of where they actually stand. The preparation loop is infinite because there's no finish line.",
+      },
+      {
+        title: "The insight from user interviews",
+        content:
+          "Five user interviews revealed three patterns. First, the real blocker isn't knowledge, it's the absence of calibrated self-knowledge. People can't assess their own readiness, so they default to \"keep learning.\" Second, confidence breaks before the skill gap becomes relevant. Third, career switchers with 5 to 10 years of relevant experience get filtered out by ATS because their title doesn't say \"Product Manager,\" even though their work does.",
+      },
+      {
+        title: "Research and prioritization",
+        content:
+          "Researched 40+ sources covering the Indian PM hiring landscape, competitor platforms, and candidate journey data. Conducted 5 primary interviews with PM aspirants at different stages. Identified three user types: the career switcher who needs translation, the accidental PM who needs structure, and the complete beginner who needs a reality check. Prioritized 9 pain points using an impact-times-frequency scoring model.",
+      },
+    ],
+    layers: [
+      {
+        number: "01",
+        title: "Resume Parsing",
+        description:
+          "AI-powered parsing that surfaces PM-relevant experience the user didn't know they had.",
+      },
+      {
+        number: "02",
+        title: "Skill Gap Assessment",
+        description:
+          "Role-specific rubric producing a starting readiness score across PM competencies.",
+      },
+      {
+        number: "03",
+        title: "Personalized Learning Path",
+        description:
+          "Weak areas get deeper modules and harder thresholds. Progress is gated, not passive.",
+      },
+      {
+        number: "04",
+        title: "Resume Builder",
+        description:
+          "Takes any job description and generates a tailored resume with before-and-after ATS scoring.",
+      },
+    ],
+  },
+  {
+    id: "dealpilot",
+    slug: "dealpilot",
+    title: "DealPilot",
+    subtitle: "The CRM that works while the founder sells.",
+    description:
+      "A CRM built for founders who sell across WhatsApp, email, and phone. Zero data entry.",
+    summary:
+      "DealPilot was designed to solve the \"entry-fatigue\" that kills early-stage startup sales. I stripped the CRM back to its core: capturing context during the call without breaking the founder's flow.",
+    image: "/images/projects/dealpilot-card.png",
+    liveUrl: "https://dealpilotcrm.lovable.app/",
+    note: {
+      text: "For the best experience, download the sample sales data sheet before testing the app and upload it during onboarding. This loads real data so you can see curated sections in action.",
+      linkLabel: "Download sample data",
+      linkUrl: "https://docs.google.com/spreadsheets/d/1W1PNQglVI2glwgXPO5iO02kZDjCLB-OaAAxYoeBT_Ow/edit?usp=sharing",
+      linkSuffix: " — you can also upload it later from the Settings tab.",
+    },
+    prdUrl: "/docs/dealpilot-prd.pdf",
+    caseStudyUrl: "/projects/dealpilot",
+    tags: ["B2B SaaS", "Sales Tech", "0 to 1", "User Research"],
+    metrics: [
+      { value: "30–40% fewer", label: "Warm leads going dark — the core problem surfaced in founder interviews. This was the number I designed against." },
+      { value: "Under 5 min", label: "Daily data entry target. 23% of CRM users cite manual entry as their #1 obstacle. My goal was to make it near-zero." },
+      { value: "Week-2 retention", label: "The cliff I designed for. Research showed founders use a CRM for 2–4 weeks, get busy closing, then stop. That's the drop-off to beat." },
+      { value: "2 interviews · 6 CRMs", label: "Primary research with early-stage founders. Competitive teardown across Salesforce, HubSpot, Pipedrive, Folk, Notion, and Sheets." },
+    ],
+    walkthroughUrl: null,
+    walkthroughCaption: "A 2-minute walkthrough of how DealPilot works.",
+    caseSections: [
+      {
+        title: "Why founders abandon every CRM",
+        content:
+          "Early-stage founders manage sales across WhatsApp, email, LinkedIn, and phone simultaneously. Existing CRMs like Salesforce and HubSpot assume you have a sales team, defined pipeline stages, and time for data entry. Founders have none of these. They sign up, use it for 2 to 3 weeks, get busy closing deals, and the CRM becomes fiction. The spreadsheet wins, not because it's good, but because it asks nothing of you.",
+      },
+      {
+        title: "Discovery: the category gap",
+        content:
+          "The way a founder sells is not a simpler version of how a sales team sells. It's a fundamentally different activity. Founders are in discovery mode, not execution mode. Every conversation is research. Every CRM on the market was designed for execution. That's not a feature gap. It's a category gap.",
+      },
+      {
+        title: "What I found talking to founders",
+        content:
+          "Conducted primary research with founders running sales at 0 to 20 person startups. Mapped the complete founder sales workflow across channels. Analysed 10 competing CRMs across a competitive white space matrix. Identified three critical gaps no tool addressed: passive conversation capture, WhatsApp as a first-class channel, and zero-data-entry pipeline management.",
+      },
+    ],
+    layers: [
+      {
+        number: "01",
+        title: "Passive Capture",
+        description:
+          "Auto-syncs Gmail, WhatsApp, and Calendar. Creates contacts and moves deal stages without the founder touching anything.",
+      },
+      {
+        number: "02",
+        title: "Intelligence at a Glance",
+        description:
+          "Deal health scoring, daily priority ranking, and a morning brief delivered in under 30 seconds.",
+      },
+      {
+        number: "03",
+        title: "Suggested Actions",
+        description:
+          "Template-based follow-up drafts the founder approves with one tap instead of writing from scratch.",
+      },
+      {
+        number: "04",
+        title: "Minimal Founder Input",
+        description:
+          "Voice-note logging after calls, extracted into structured CRM fields in under 60 seconds.",
+      },
+    ],
+  },
+];

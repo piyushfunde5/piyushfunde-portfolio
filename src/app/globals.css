@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  /* Surface hierarchy - tonal stacking */
+  --color-surface: #040e1f;
+  --color-surface-container-low: #061326;
+  --color-surface-container: #0b1a2f;
+  --color-surface-container-high: #102036;
+  --color-surface-container-highest: #15263f;
+  --color-surface-bright: #1b2c47;
+  --color-surface-variant: #15263f;
+
+  /* Text colors */
+  --color-on-background: #dbe6fe;
+  --color-on-surface: #dbe6fe;
+  --color-on-surface-variant: #a0abc2;
+  --color-outline: #6b768b;
+  --color-outline-variant: #3d485c;
+
+  /* Accent - Lime */
+  --color-primary: #b1fe4d;
+  --color-primary-container: #7cc404;
+  --color-on-primary: #3a5f00;
+
+  /* Footer */
+  --color-footer-bg: #0f172a;
+}
+
+@theme inline {
+  --color-surface: var(--color-surface);
+  --color-surface-container-low: var(--color-surface-container-low);
+  --color-surface-container: var(--color-surface-container);
+  --color-surface-container-high: var(--color-surface-container-high);
+  --color-surface-container-highest: var(--color-surface-container-highest);
+  --color-surface-bright: var(--color-surface-bright);
+  --color-surface-variant: var(--color-surface-variant);
+  --color-on-background: var(--color-on-background);
+  --color-on-surface: var(--color-on-surface);
+  --color-on-surface-variant: var(--color-on-surface-variant);
+  --color-outline: var(--color-outline);
+  --color-outline-variant: var(--color-outline-variant);
+  --color-primary: var(--color-primary);
+  --color-primary-container: var(--color-primary-container);
+  --color-on-primary: var(--color-on-primary);
+  --color-footer-bg: var(--color-footer-bg);
+  --font-headline: var(--font-manrope);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-headline), sans-serif;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* Hide scrollbar for book shelf */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Fade in animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pulse animation for availability dot */
+@keyframes pulse-lime {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-lime {
+  animation: pulse-lime 2s ease-in-out infinite;
+}
