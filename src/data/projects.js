@@ -150,7 +150,7 @@ export const projects = [
     summary:
       "PMpath replaces the infinite preparation loop with a calibrated, gated journey. Instead of passive course consumption, it gives aspiring PMs an honest signal of where they actually stand and a concrete path to their first application.",
     image: "/images/projects/pmpath-card.png",
-    liveUrl: "PLACEHOLDER_PMPATH_URL",
+    liveUrl: "https://pmpath.piyushfunde.com/",
     prdUrl: "/docs/pmpath-prd.pdf",
     caseStudyUrl: "/projects/pmpath",
     tags: ["EdTech", "Career Tech", "0 to 1", "User Research"],
