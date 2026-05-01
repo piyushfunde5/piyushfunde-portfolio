@@ -33,7 +33,7 @@ function PhoneFrame({ src, alt, onRatioDetected }) {
   );
 }
 
-function BrowserFrame({ src, alt, onRatioDetected }) {
+function BrowserFrame({ src, alt, onRatioDetected, url }) {
   return (
     <div style={{
       borderRadius: "12px",
@@ -56,7 +56,7 @@ function BrowserFrame({ src, alt, onRatioDetected }) {
           padding: "3px 14px", fontSize: 11, color: "rgba(255,255,255,0.3)",
           border: "1px solid rgba(255,255,255,0.07)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
         }}>
-          app.tripsync.com
+          {url ? url.replace(/^https?:\/\//, "") : "app.example.com"}
         </div>
       </div>
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -86,14 +86,14 @@ function TabletFrame({ src, alt, onRatioDetected }) {
   );
 }
 
-function DeviceFrame({ src, alt, deviceType, onRatioDetected }) {
-  const props = { src, alt, onRatioDetected };
+function DeviceFrame({ src, alt, deviceType, onRatioDetected, url }) {
+  const props = { src, alt, onRatioDetected, url };
   if (deviceType === "desktop") return <BrowserFrame {...props} />;
   if (deviceType === "tablet") return <TabletFrame {...props} />;
   return <PhoneFrame {...props} />;
 }
 
-function ImageCarousel({ images }) {
+function ImageCarousel({ images, url }) {
   const [current, setCurrent] = useState(0);
   const [fading, setFading] = useState(false);
   const [ratios, setRatios] = useState({});
@@ -184,6 +184,7 @@ function ImageCarousel({ images }) {
             alt={slide.caption || `Screen ${current + 1}`}
             deviceType={deviceType}
             onRatioDetected={(ratio) => setRatios((prev) => ({ ...prev, [current]: ratio }))}
+            url={url}
           />
         </div>
 
@@ -473,7 +474,7 @@ export default function ProjectDetail({ project, index }) {
 
       {/* Image Carousel */}
       {project.images?.length > 0
-        ? <ImageCarousel images={project.images} />
+        ? <ImageCarousel images={project.images} url={project.liveUrl} />
         : <CarouselPlaceholder title={project.title} />
       }
 
