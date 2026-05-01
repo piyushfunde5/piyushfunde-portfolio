@@ -430,14 +430,16 @@ export default function ProjectDetail({ project, index }) {
             >
               Try it live
             </a>
-            <a
-              href={project.prdUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 border border-[var(--color-primary)]/20 text-[var(--color-primary)] font-bold tracking-tight rounded-[4px] hover:bg-[var(--color-primary)]/10 transition-all"
-            >
-              Read the PRD
-            </a>
+            {project.prdUrl && (
+              <a
+                href={project.prdUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 border border-[var(--color-primary)]/20 text-[var(--color-primary)] font-bold tracking-tight rounded-[4px] hover:bg-[var(--color-primary)]/10 transition-all"
+              >
+                Read the PRD
+              </a>
+            )}
           </div>
 
           {/* Project note */}
