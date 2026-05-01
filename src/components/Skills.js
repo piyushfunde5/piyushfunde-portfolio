@@ -24,10 +24,10 @@ const signals = [
 export default function Skills() {
   return (
     <section className="py-24 px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto overflow-x-auto hide-scrollbar">
-        <div className="flex gap-8 lg:gap-12 min-w-max">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
           {signals.map((signal) => (
-            <div key={signal.title} className="flex-1 max-w-xs">
+            <div key={signal.title}>
               <p className="text-[var(--color-primary)] font-bold mb-2">
                 {signal.title}
               </p>
