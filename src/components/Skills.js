@@ -1,23 +1,23 @@
 const signals = [
   {
-    title: "FinTech",
-    description: "Payments, fraud, cross-sell strategy.",
+    title: "BFSI & Fintech",
+    description: "Fraud prevention, referral acquisition, embedded finance, API/SDK integrations in regulated banking.",
   },
   {
-    title: "0 to 1 products",
-    description: "Built and sold a startup from scratch.",
+    title: "Product Execution",
+    description: "Discovery to post-launch: user research, PRDs, sprint planning, backlog grooming, QA, Jira.",
   },
   {
-    title: "Prototyping",
-    description: "Figma, Lovable, code-assisted delivery.",
+    title: "Data & Analytics",
+    description: "SQL, Excel, Tableau, Power BI — metrics definition, A/B testing, insight generation.",
   },
   {
-    title: "Data-informed",
-    description: "SQL, metrics, A/B testing thinking.",
+    title: "AI & Prototyping",
+    description: "Agentic workflows, prompt engineering, Figma, low-code/no-code (Softr, Airtable, Make.com).",
   },
   {
-    title: "AI-era PM",
-    description: "LLM products, agentic workflows.",
+    title: "0 to 1 Builder",
+    description: "Bootstrapped and sold a venture. Built and shipped 3 products end-to-end with code assistance.",
   },
 ];
 
