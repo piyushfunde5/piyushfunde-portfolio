@@ -30,7 +30,7 @@ export const metadata = {
     siteName: "Piyush Funde",
     images: [
       {
-        url: "https://piyushfunde.com/og-image.png",
+        url: "https://piyushfunde.com/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Piyush Funde - Product Manager Portfolio",
@@ -43,7 +43,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Piyush Funde - Product Manager",
     description: "I turn chaos into systems that scale.",
-    images: ["https://piyushfunde.com/og-image.png"],
+    images: ["https://piyushfunde.com/opengraph-image"],
   },
   robots: {
     index: true,
