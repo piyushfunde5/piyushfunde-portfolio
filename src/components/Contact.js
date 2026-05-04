@@ -35,14 +35,25 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right: Resume button */}
-          <div className="flex md:justify-end">
+          {/* Right: Resume buttons */}
+          <div className="flex md:justify-end gap-2">
             <a
-              href="/resume.pdf"
-              download
-              className="bg-[var(--color-primary)] text-[var(--color-on-primary)] text-lg lg:text-xl font-bold px-12 py-6 rounded-[4px] hover:brightness-110 active:scale-95 transition-all w-full md:w-auto text-center"
+              href="/docs/Piyush_Product_2026_5.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[var(--color-primary)] text-[var(--color-on-primary)] text-lg lg:text-xl font-bold px-12 py-6 rounded-l-[4px] hover:brightness-110 active:scale-95 transition-all w-full md:w-auto text-center"
             >
-              Download Resume
+              View Resume
+            </a>
+            <a
+              href="/docs/Piyush_Product_2026_5.pdf"
+              download="Piyush_Funde_Resume.pdf"
+              className="bg-[var(--color-primary)] text-[var(--color-on-primary)] px-6 py-6 rounded-r-[4px] hover:brightness-110 active:scale-95 transition-all flex items-center border-l border-[var(--color-on-primary)]/20"
+              title="Download Resume"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
             </a>
           </div>
         </div>
