@@ -122,26 +122,50 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <a
-              href="/resume.pdf"
-              download
-              className="bg-[var(--color-primary)] text-[var(--color-on-primary)] px-6 py-2 rounded-[4px] font-bold text-sm hover:brightness-110 transition-all active:scale-95"
-            >
-              Resume
-            </a>
+            <div className="flex items-center gap-1">
+              <a
+                href="/docs/Piyush_Product_2026_5.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[var(--color-primary)] text-[var(--color-on-primary)] px-6 py-2 rounded-l-[4px] font-bold text-sm hover:brightness-110 transition-all active:scale-95"
+              >
+                Resume
+              </a>
+              <a
+                href="/docs/Piyush_Product_2026_5.pdf"
+                download="Piyush_Funde_Resume.pdf"
+                className="bg-[var(--color-primary)] text-[var(--color-on-primary)] px-2 py-2 rounded-r-[4px] font-bold text-sm hover:brightness-110 transition-all active:scale-95 border-l border-[var(--color-on-primary)]/20"
+                title="Download Resume"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Mobile: Resume (hidden when menu open) + Hamburger */}
           <div className="flex md:hidden items-center gap-3 relative z-50">
-            <a
-              href="/resume.pdf"
-              download
-              className={`bg-[var(--color-primary)] text-[var(--color-on-primary)] px-4 py-2 rounded-[4px] font-bold text-sm active:scale-90 transition-all duration-300 ${
-                menuOpen ? "opacity-0 pointer-events-none scale-95" : "opacity-100 scale-100"
-              }`}
-            >
-              Resume
-            </a>
+            <div className={`flex items-center gap-1 transition-all duration-300 ${menuOpen ? "opacity-0 pointer-events-none scale-95" : "opacity-100 scale-100"}`}>
+              <a
+                href="/docs/Piyush_Product_2026_5.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[var(--color-primary)] text-[var(--color-on-primary)] px-4 py-2 rounded-l-[4px] font-bold text-sm active:scale-90 transition-all"
+              >
+                Resume
+              </a>
+              <a
+                href="/docs/Piyush_Product_2026_5.pdf"
+                download="Piyush_Funde_Resume.pdf"
+                className="bg-[var(--color-primary)] text-[var(--color-on-primary)] px-2 py-2 rounded-r-[4px] font-bold text-sm active:scale-90 transition-all border-l border-[var(--color-on-primary)]/20"
+                title="Download Resume"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+              </a>
+            </div>
           </div>
           <button
             className="flex md:hidden items-center justify-center w-10 h-10 text-slate-300 relative z-50"
@@ -215,22 +239,36 @@ export default function Navbar() {
             );
           })}
 
-          {/* Resume button */}
-          <a
-            href="/resume.pdf"
-            download
-            onClick={() => setMenuOpen(false)}
-            className={`mt-6 bg-[var(--color-primary)] text-[var(--color-on-primary)] px-10 py-4 rounded-[4px] font-bold text-lg tracking-tight hover:brightness-110 active:scale-95 transition-all relative z-10 ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+          {/* Resume buttons */}
+          <div
+            className={`mt-6 flex items-center gap-2 relative z-10 transition-all duration-400 ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
             style={{
               transitionDelay: menuOpen ? `${navLinks.length * 80}ms` : "0ms",
               transitionProperty: "opacity, transform",
               transitionDuration: "400ms",
             }}
           >
-            Resume
-          </a>
+            <a
+              href="/docs/Piyush_Product_2026_5.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+              className="bg-[var(--color-primary)] text-[var(--color-on-primary)] px-10 py-4 rounded-l-[4px] font-bold text-lg tracking-tight hover:brightness-110 active:scale-95 transition-all"
+            >
+              View Resume
+            </a>
+            <a
+              href="/docs/Piyush_Product_2026_5.pdf"
+              download="Piyush_Funde_Resume.pdf"
+              onClick={() => setMenuOpen(false)}
+              className="bg-[var(--color-primary)] text-[var(--color-on-primary)] px-4 py-4 rounded-r-[4px] font-bold hover:brightness-110 active:scale-95 transition-all border-l border-[var(--color-on-primary)]/20"
+              title="Download Resume"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
         {/* Bottom — availability badge */}
