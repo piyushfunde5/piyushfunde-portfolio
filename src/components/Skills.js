@@ -13,7 +13,7 @@ const signals = [
   },
   {
     title: "AI & Prototyping",
-    description: "Agentic workflows, prompt engineering, Figma, low-code/no-code (Softr, Airtable, Make.com).",
+    description: "Agentic prototyping — Claude Code, Cursor, Lovable, Stitch. Full product buildouts using AI assistance, from PRD to deployed product.",
   },
   {
     title: "0 to 1 Builder",
